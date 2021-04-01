@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const app = require('electron').remote;
 const dialog = app.dialog;
-const readFile = require("./FileUtil/ReadFile.js");
+const readCSVFile = require("./FileUtil/ReadCSVFile.js");
 
 document.getElementById("btn-attendance-file").addEventListener("click", function () {
     let fileNames = dialog.showOpenDialogSync();
@@ -11,7 +11,7 @@ document.getElementById("btn-attendance-file").addEventListener("click", functio
     } else {
         document.getElementById("attendance-file").value = path.basename(fileNames[0]);
         // console.log(fileNames[0]);
-        readFile.fn(fileNames[0]);
+        readCSVFile.fn(fileNames[0]);
     }
 }, false);
 

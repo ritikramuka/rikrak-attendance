@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function readFile(fileName) {
+function readCSVFile(fileName) {
     const users = [];
     fs.readFile(fileName, 'utf16le', function (err, data) {
         if (err)
@@ -22,5 +22,5 @@ function readFile(fileName) {
 const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 module.exports = {
-    fn: readFile,
+    fn: readCSVFile,
 }

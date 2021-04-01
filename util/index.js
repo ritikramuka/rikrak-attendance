@@ -10,7 +10,7 @@ document.getElementById("btn-attendance-file").addEventListener("click", functio
     if (fileNames === undefined) {
         console.log("No file selected");
     } else {
-        document.getElementById("attendance-file").value = path.basename(fileNames[0]);
+        document.getElementById("btn-attendance-file").value = path.basename(fileNames[0]);
         // console.log(fileNames[0]);
         readCSVFile.fn(fileNames[0]);
     }
@@ -21,7 +21,7 @@ document.getElementById("btn-class-file").addEventListener("click", function () 
     if (fileNames === undefined) {
         console.log("No file selected");
     } else {
-        document.getElementById("class-file").value = path.basename(fileNames[0]);
+        document.getElementById("btn-class-file").value = path.basename(fileNames[0]);
         readXlsxFile.fn(fileNames[0]);
         // console.log(fileNames[0]);
     }

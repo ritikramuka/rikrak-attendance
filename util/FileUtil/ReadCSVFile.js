@@ -1,21 +1,18 @@
 const fs = require('fs');
 
-function readCSVFile(fileName) {
-    const users = [];
+function readCSVFile(fileName, AttendeesInfo) {
     fs.readFile(fileName, 'utf16le', function (err, data) {
         if (err)
             return;
         var dataArray = data.split(/\r?\n?\t/);
         for (let i = 0; i < dataArray.length; i++) {
             if (emailRegexp.test(dataArray[i]) == true) {
-                const user = {
-                    userEmail: dataArray[i],
-                    timeStamp: dataArray[i - 1]
-                }
-                users.push(user);
+                const userEmail = dataArray[i];
+                const timeStamp = dataArray[i - 1];
+                AttendeesInfo[userEmail] = timeStamp; 
             }
         }
-        console.table(users);
+        // console.log(AttendeesInfo);
     })
 }
 

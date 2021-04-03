@@ -1,6 +1,8 @@
 const fs = require('fs');
 
-function readCSVFile(fileName, AttendeesInfo) {
+const Attendees = [];
+
+function readCSVFile(fileName) {
     fs.readFile(fileName, 'utf16le', function (err, data) {
         if (err)
             return;
@@ -9,10 +11,10 @@ function readCSVFile(fileName, AttendeesInfo) {
             if (emailRegexp.test(dataArray[i]) == true) {
                 const userEmail = dataArray[i];
                 const timeStamp = dataArray[i - 1];
-                AttendeesInfo[userEmail] = timeStamp; 
+                if ((Number)(timeStamp.split('m')[0]) >= 2)
+                    Attendees.push(userEmail);
             }
         }
-        // console.log(AttendeesInfo);
     })
 }
 
@@ -20,4 +22,5 @@ const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-
 
 module.exports = {
     fn: readCSVFile,
+    data: readCSVFile,
 }

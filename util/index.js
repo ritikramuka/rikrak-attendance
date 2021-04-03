@@ -5,7 +5,7 @@ const dialog = app.dialog;
 const readCSVFile = require("./FileUtil/ReadCSVFile.js");
 const readXlsxFile = require("./FileUtil/ReadXlsxFile.js");
 
-const Attendees = new Map();
+var Attendees = [];
 
 document.getElementById("btn-attendance-file").addEventListener("click", function () {
     let fileNames = dialog.showOpenDialogSync();
@@ -15,8 +15,8 @@ document.getElementById("btn-attendance-file").addEventListener("click", functio
         document.getElementById("btn-attendance-file").value = path.basename(fileNames[0]);
         readCSVFile.fn(fileNames[0], Attendees);
         const key = "RITIK.RAMUKA@msitjanakpuri.co.in";
-        console.log(key in Attendees);
         console.log(Attendees);
+        console.log(Attendees.includes(key));
     }
 }, false);
 

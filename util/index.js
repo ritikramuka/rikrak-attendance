@@ -7,16 +7,20 @@ const readXlsxFile = require("./FileUtil/ReadXlsxFile.js");
 
 var Attendees = [];
 
-document.getElementById("btn-attendance-file").addEventListener("click", function () {
-    let fileNames = dialog.showOpenDialogSync();
+document.getElementById("btn-attendance-file").addEventListener("click", async function () {
+    let fileNames = await dialog.showOpenDialogSync();
     if (fileNames === undefined) {
         console.log("No file selected");
     } else {
         document.getElementById("btn-attendance-file").value = path.basename(fileNames[0]);
         readCSVFile.fn(fileNames[0], Attendees);
-        const key = "RITIK.RAMUKA@msitjanakpuri.co.in";
         console.log(Attendees);
-        console.log(Attendees.includes(key));
+        // for (const key in Attendees) {
+        //     if (Object.hasOwnProperty.call(Attendees, key)) {
+        //         const element = Attendees[key];
+        //         console.log(element);
+        //     }
+        // }
     }
 }, false);
 

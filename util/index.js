@@ -12,7 +12,9 @@ document.getElementById("btn-attendance-file").addEventListener("click", async f
     if (fileNames === undefined) {
         console.log("No file selected");
     } else {
-        document.getElementById("btn-attendance-file").value = path.basename(fileNames[0]);
+        let btnVal = path.basename(fileNames[0]);
+        btnVal = btnVal.length > 13 ? btnVal.slice(0, 10) + "..." : btnVal;
+        document.getElementById("btn-attendance-file").value = btnVal;
         readCSVFile.fn(fileNames[0], Attendees);
         console.log(Attendees);
         // for (const key in Attendees) {

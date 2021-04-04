@@ -5,11 +5,20 @@ html {
 body {
   margin: 0;
   font-family: monospace;
+  word-wrap: break-word;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-size: 2.3em;
+  margin: 0px;
 }
 
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg,#d53369 50%, #daae51 50%);
+  background-image: linear-gradient(-60deg, #d53369 50%, #daae51 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;
@@ -64,28 +73,25 @@ body {
   border: 2px solid #010100;
   padding: 15px;
   color: #000;
-  text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
 }
 
 #btn-mark-attendance {
-    background-color: black;
-    color:white;
-    border-radius: 13px;
-    max-width: 240px;
-}
-
-#btn-attendance-file #btn-class-file{
-    max-width: 180px;
+  background-color: black;
+  color: white;
+  border-radius: 13px;
+  max-width: 240px;
+  font-weight: 600;
 }
 
 .file {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 input {
-    margin: 0 7px;
-    width: 80%;
+  margin: 0 7px;
+  width: 80%;
+  max-width: 180px;
 }

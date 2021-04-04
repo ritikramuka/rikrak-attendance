@@ -6,7 +6,6 @@ function createWindow() {
         width: 800,
         height: 600,
         show: false,
-        backgroundColor: '#6188F4',
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,

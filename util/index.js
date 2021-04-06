@@ -16,7 +16,6 @@ document.getElementById("btn-attendance-file").addEventListener("click", async f
         btnVal = btnVal.length > 13 ? btnVal.slice(0, 10) + "..." : btnVal;
         document.getElementById("btn-attendance-file").value = btnVal;
         readCSVFile.fn(fileNames[0], Attendees);
-        // console.log(Attendees);
     }
 }, false);
 

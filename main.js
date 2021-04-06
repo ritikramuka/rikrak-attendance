@@ -13,6 +13,8 @@ function createWindow() {
         }
     })
 
+    win.setMenuBarVisibility(false);
+
     win.loadFile("./util/index.html")
         .then(function () {
             win.show();

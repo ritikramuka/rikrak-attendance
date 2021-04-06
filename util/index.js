@@ -3,9 +3,9 @@ const path = require('path');
 const app = require('electron').remote;
 const dialog = app.dialog;
 const readCSVFile = require("./FileUtil/ReadCSVFile.js");
-const readXlsxFile = require("./FileUtil/ReadXlsxFile.js");
+const updateXlsxFile = require("./FileUtil/UpdateXlsxFile.js");
 
-var Attendees = [];
+var Attendees = [], classRecordFile;
 
 document.getElementById("btn-attendance-file").addEventListener("click", async function () {
     let fileNames = await dialog.showOpenDialogSync();
@@ -16,13 +16,7 @@ document.getElementById("btn-attendance-file").addEventListener("click", async f
         btnVal = btnVal.length > 13 ? btnVal.slice(0, 10) + "..." : btnVal;
         document.getElementById("btn-attendance-file").value = btnVal;
         readCSVFile.fn(fileNames[0], Attendees);
-        console.log(Attendees);
-        // for (const key in Attendees) {
-        //     if (Object.hasOwnProperty.call(Attendees, key)) {
-        //         const element = Attendees[key];
-        //         console.log(element);
-        //     }
-        // }
+        // console.log(Attendees);
     }
 }, false);
 
@@ -32,6 +26,14 @@ document.getElementById("btn-class-file").addEventListener("click", function () 
         console.log("No file selected");
     } else {
         document.getElementById("btn-class-file").value = path.basename(fileNames[0]);
-        readXlsxFile.fn(fileNames[0]);
+        classRecordFile = fileNames[0];
     }
 }, false);
+
+document.getElementById("btn-mark-attendance").addEventListener("click", function () {
+    if(Attendees.length > 0 && classRecordFile != undefined) {
+        updateXlsxFile.fn(classRecordFile, Attendees);      
+    } else {
+        // err alert
+    }
+})

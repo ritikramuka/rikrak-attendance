@@ -30,9 +30,15 @@ document.getElementById("btn-class-file").addEventListener("click", function () 
 }, false);
 
 document.getElementById("btn-mark-attendance").addEventListener("click", function () {
-    if(Attendees.length > 0 && classRecordFile != undefined) {
-        updateXlsxFile.fn(classRecordFile, Attendees);      
+    if (Attendees.length > 0 && classRecordFile != undefined) {
+        updateXlsxFile.fn(classRecordFile, Attendees);
     } else {
-        // err alert
+        if (Attendees.length == 0 && classRecordFile == undefined) {
+            alert("Select File");
+        } else if (Attendees.length == 0) {
+            alert("Select Attendance File");
+        } else {
+            alert("Select Class File");
+        }
     }
 })

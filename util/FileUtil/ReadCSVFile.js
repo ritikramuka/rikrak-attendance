@@ -7,7 +7,7 @@ function readCSVFile(fileName, AttendeesInfo) {
         if (emailRegexp.test(dataArray[i]) == true) {
             const userEmail = dataArray[i];
             const timeStamp = dataArray[i - 1];
-            if ((Number)(timeStamp.split('m')[0]) >= 2) //change time as per college requirements
+            if ((Number)(timeStamp.split('m')[0]) >= 50) //change time as per college requirements
                 AttendeesInfo.push(userEmail);
         }
     }

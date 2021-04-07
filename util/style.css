@@ -96,11 +96,20 @@ input {
   max-width: 180px;
 }
 
-input[type=button]:hover {
-  background-color:rgb(249, 250, 250);
-} 
+input[type="button"]:hover {
+  background-color: rgb(249, 250, 250);
+}
 
-input[type=button][id=btn-mark-attendance]:hover {
-  background-color:white !important;
+input[type="button"][id="btn-mark-attendance"]:hover {
+  background-color: white !important;
   color: #000 !important;
-} 
+}
+
+a {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#contact {
+  color: black;
+}

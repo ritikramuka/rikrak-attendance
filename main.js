@@ -7,7 +7,7 @@ function createWindow() {
         width: 800,
         height: 600,
         show: false,
-        icon: path.join(__dirname, 'logo/logo.png'),
+        icon: path.join(__dirname, 'logo/logo.ico'),
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,

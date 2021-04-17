@@ -1,7 +1,7 @@
 {
   "name": "rikrak-attendance",
   "ProductName": "\"rikrak attendance manager\"",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "\"attendance manager\"",
   "main": "main.js",
   "scripts": {

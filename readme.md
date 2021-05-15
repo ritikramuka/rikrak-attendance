@@ -4,7 +4,7 @@
 
 Please feel free to download the packaged desktop application [here](https://drive.google.com/drive/folders/187j1OYoeUpJV5F7NVcqwqySMawy4-yLE?usp=sharing).
 
-## So why a attendance app?
+## So why an attendance app?
 So the idea is simple. We have our online classes on Microsoft teams and professors get an option to download all the attendees attendance report which looks like this:
 
 ![Attendance Report Screenshot](./screenshots/AttendanceReport.png)

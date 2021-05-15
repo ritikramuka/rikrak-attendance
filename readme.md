@@ -1,6 +1,6 @@
 # RikRak-attendance
 
-![start with how](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)
+![start with how](https://img.shields.io/badge/start%20with-how-brightgreen.svg?style=flat)
 
 Please feel free to download the packaged desktop application [here](https://drive.google.com/drive/folders/187j1OYoeUpJV5F7NVcqwqySMawy4-yLE?usp=sharing).
 

@@ -38,3 +38,6 @@ So lets talk about this application. This is an electron.js desktop application,
 
 ## Contributions
 If there's a feature you'd want in this app or if there's something you might not like, and would want changed, feel free to raise an issue or comment on a previous one. Questions, Suggestions, Ideas, Complaints or even if it is some random banter, you'd like to discuss. Reach me out. 😄
+
+## Buy me a coffee
+https://www.buymeacoffee.com/RikRak

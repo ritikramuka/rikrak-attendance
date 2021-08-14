@@ -16,6 +16,6 @@
   "author": "Ritik Ramuka",
   "license": "MIT",
   "dependencies": {
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.17.0"
   }
 }
